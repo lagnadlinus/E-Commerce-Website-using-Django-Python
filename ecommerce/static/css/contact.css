@@ -1,0 +1,108 @@
+
+
+
+/* General Section Styles */
+.contact-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.contact-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Contact Form Styles */
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.contact-section textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Submit Button */
+.contact-section button.submit-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-section button.submit-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.contact-section button.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Shipping Instructions */
+.contact-section h2 {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.contact-section p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 1.5rem;
+    }
+
+    .contact-section h1 {
+        font-size: 2rem;
+    }
+
+    .contact-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-section form {
+        gap: 1rem;
+    }
+}

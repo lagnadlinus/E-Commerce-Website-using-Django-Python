@@ -1,0 +1,43 @@
+
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Herba Wanders, our values, and meet our dedicated team members who are committed to your health and well-being.">
+    <title>About Us - Herba Wanders</title>
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+</head>
+<body>
+    <!-- Header -->
+    {% include 'ecommerce/header.html' %}
+
+    <!-- About Us Section -->
+    <main>
+        <section class="about-section">
+            <h1>About Herba Wanders</h1>
+            <p>Herba Wanders is committed to providing high-quality nutritional products sourced from nature.</p>
+            
+            <h2>Our Values</h2>
+            <p>We believe in sustainable sourcing, transparency, and creating a positive impact on our customers' health and well-being.</p>
+            
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                {% for member in team_members %}
+                <div class="team-member">
+                    <img src="{{ member.photo.url }}" alt="{{ member.name }}">
+                    <h3>{{ member.name }}</h3>
+                    <p>{{ member.role }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    {% include 'ecommerce/footer.html' %}
+</body>
+</html>

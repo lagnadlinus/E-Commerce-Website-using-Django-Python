@@ -1,0 +1,60 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ADD SEO">
+    <title>Products - Herba Wanders</title>
+    <link rel="stylesheet" href="{% static 'css/products.css' %}">
+</head>
+<body>
+    <!-- Header -->
+    {% include 'ecommerce/header.html' %}
+
+    <!-- Products Section -->
+    <main>
+        <section class="products-section">
+            <h1>Our Products</h1>
+            <div class="products-grid">
+                {% for product in products %}
+                <div class="product-item">
+                    {% if product.image %}
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}">  <!-- Product image -->
+                    {% else %}
+                        <img src="{% static 'images/default-product.png' %}" alt="{{ product.name }}">  <!-- Default image if no product image -->
+                    {% endif %}
+                    <h3>{{ product.name }}</h3>
+                    <p>${{ product.price }}</p>
+                    <div class="product-buttons">
+                        <!-- Quantity Input -->
+                        <input type="number" class="product-quantity" 
+                               id="quantity-{{ product.id }}" 
+                               min="1" 
+                               value="1" 
+                               aria-label="Quantity for {{ product.name }}">
+                        <!-- Add to Cart Button -->
+                        <button class="btn add-to-cart" 
+                                data-id="{{ product.id }}" 
+                                data-name="{{ product.name }}" 
+                                data-price="{{ product.price }}" 
+                                data-image="{{ product.image.url }}">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                {% empty %}
+                <p>No products available at the moment.</p>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    {% include 'ecommerce/footer.html' %}
+
+    <script src="{% static 'js/products.js' %}"></script>
+</body>
+</html>

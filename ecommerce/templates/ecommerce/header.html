@@ -1,0 +1,83 @@
+
+
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Herba Wanders - Explore natural wellness products">
+    <title>Home - Herba Wanders</title>
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+</head>
+<body>
+    <header>
+        <!-- Top Section: Logo, Sign-In/Register, and Cart -->
+        <div class="top-header">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="/">
+                    <img src="{% static 'images/logo.png' %}" alt="Brand Logo">
+                </a>
+            </div>
+
+            <!-- User Options -->
+            <div class="user-options">
+                {% if request.user.is_authenticated %}
+                    <div class="account-menu">
+                        <button class="account-btn">Account</button>
+                        <div class="dropdown">
+                            <p>{{ request.user.username }}</p>
+                            <a href="/account/">Account Information</a>
+                            <a href="{% url 'users:logout' %}">Sign Out</a>
+                        </div>
+                    </div>
+                {% else %}
+                    <a href="{% url 'users:login' %}" class="btn">Sign In</a>
+                    <a href="{% url 'users:register' %}" class="btn">Register</a>
+                {% endif %}
+                
+                <!-- Cart -->
+                <a href="/cart/" class="cart-button">
+                    <img src="{% static 'images/cart-icon.png' %}" alt="Cart" class="cart-icon">
+                    <span class="cart-price" id="cart-price">$0.00</span>
+                    <span class="cart-count" data-count="0"></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Middle Section: Search Bar -->
+        <div class="middle-header">
+            <!-- Hamburger Menu -->
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <form action="/search/" method="GET">
+                    <input type="text" name="query" placeholder="Search for products...">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products/">Products</a></li>
+                <li><a href="/tipsandresources/">Tips & Resources</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script src="{% static 'js/header.js' %}"></script>
+</body>
+</html>

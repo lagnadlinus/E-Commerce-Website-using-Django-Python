@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ADD SEO">
+    <title>Contact Us - Herba Wanders</title>
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+</head>
+<body>
+    <!-- Header -->
+    {% include 'ecommerce/header.html' %}
+
+    <!-- Contact Us Section -->
+    <main>
+        <section class="contact-section">
+            <h1>Contact Us</h1>
+
+            <form action="/submit-contact/" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn submit-btn">Send Message</button>
+            </form>
+
+            <h2>Shipping Instructions</h2>
+            <p>We offer free shipping on all orders above $50. Delivery takes 5-7 business days.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    {% include 'ecommerce/footer.html' %}
+</body>
+</html>

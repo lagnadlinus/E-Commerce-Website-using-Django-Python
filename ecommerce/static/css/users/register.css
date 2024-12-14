@@ -1,0 +1,124 @@
+
+
+
+
+/* Register Page */
+.register-page {
+    margin-top: 0; /* Remove any top margin to align closer to the header */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items closer to the top */
+    padding: 20px;
+    background-color: #f4f8fa;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Register Form Styling */
+.register-page form {
+    margin-top: 10px; /* Reduce the margin to position the form closer to the top */
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    padding: 30px 40px; /* Adjust padding for a balanced appearance */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Form Hover Animation */
+.register-page form:hover {
+    transform: translateY(-5px); /* Slight elevation on hover */
+}
+
+/* Form Heading */
+.register-page form h2 {
+    text-align: center;
+    color: #333;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 0; /* Ensure there's no unnecessary top margin */
+    position: relative;
+}
+
+/* Add a decorative underline below the heading */
+.register-page form h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #007bff;
+    margin: 10px auto 0 auto;
+    border-radius: 3px;
+}
+
+/* Input Fields */
+.register-page form input[type="text"],
+.register-page form input[type="email"],
+.register-page form input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #555;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.register-page form input[type="text"]:focus,
+.register-page form input[type="email"]:focus,
+.register-page form input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.2);
+}
+
+/* Submit Button */
+.register-page form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Submit Button Hover State */
+.register-page form input[type="submit"]:hover {
+    background-color: #007bff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 480px) {
+    .register-page form {
+        padding: 20px;
+    }
+
+    .register-page form h2 {
+        font-size: 22px;
+    }
+
+    .register-page form input {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+
+/* Header Sticky Adjustments */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #f4f8fa;
+}

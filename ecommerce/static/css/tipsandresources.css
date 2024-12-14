@@ -1,0 +1,91 @@
+
+
+
+
+/* Scope all styles within .tips-and-resources-page */
+.tips-and-resources-page {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.tips-and-resources-page .tips-section {
+    padding: 2rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.tips-and-resources-page .tips-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* Tips Container */
+.tips-and-resources-page .tips-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Tips Item */
+.tips-and-resources-page .tips-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tips-and-resources-page .tips-item .tips-content {
+    flex: 2;
+}
+
+.tips-and-resources-page .tips-item .tips-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #28a745;
+}
+
+.tips-and-resources-page .tips-item .tips-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.tips-and-resources-page .tips-item .tips-content .tips-benefits {
+    font-style: italic;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Tips Image */
+.tips-and-resources-page .tips-item .tips-image {
+    flex: 1;
+    text-align: center;
+}
+
+.tips-and-resources-page .tips-item .tips-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tips-and-resources-page .tips-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tips-and-resources-page .tips-item .tips-image {
+        margin-bottom: 1rem;
+    }
+}

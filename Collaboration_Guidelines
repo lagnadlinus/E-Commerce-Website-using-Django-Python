@@ -1,0 +1,52 @@
+GitHub Collaboration Guidelines:
+
+1. Keep Your Local Repository Up-to-Date
+Before making any new changes, always pull the latest changes from the remote repository to make sure your local copy is up-to-date:
+git pull origin main
+
+2. Create a New Branch for Features or Bug Fixes
+Always create a new branch for each feature or bug fix. This avoids directly working on the main branch and keeps your work isolated.
+git checkout -b feature/your-feature-name
+
+3. Commit Changes Frequently
+Make small, atomic commits with meaningful messages. A good commit message explains why the change was made, not just what was changed.
+git commit -m "Add new feature X"
+Do not commit large changes all at once. Break them down into logical steps.
+
+4. Avoid Committing Sensitive Files
+Add files like .DS_Store, *.pyc, and other temporary or configuration files to your .gitignore to avoid committing unnecessary files.
+Example of .gitignore:
+.DS_Store
+*.pyc
+__pycache__/
+db.sqlite3
+
+5. Before Pushing, Always Pull and Resolve Conflicts
+Before you push your changes to the remote repository, always pull the latest changes:
+git pull origin main
+Resolve any conflicts that might occur during the pull.
+
+6. Push Your Changes to Your Branch
+Once you’ve made your changes and committed them to your local branch, push your branch to the remote repository:
+git push origin feature/your-feature-name
+
+7. Open a Pull Request (PR) for Review
+After pushing, go to GitHub and create a Pull Request (PR) to merge your changes into the main branch.
+Include a clear description of what the PR does. This allows your team to review the changes before merging.
+
+8. Review PRs Before Merging
+When you’re ready to merge someone else’s changes, always review the pull request before merging.
+Ensure that the code follows the project’s coding standards and that no unnecessary files are added.
+
+9. Do Not Push to Main Directly
+Never push changes directly to the main branch. All changes should go through a separate feature branch and be merged via pull requests. This ensures code quality and collaboration.
+
+10. Keep the Commit History Clean
+Avoid unnecessary merge commits. If your commits have been squashed into one clean commit, it makes the history much easier to read.
+
+11. Always Sync with the Remote
+Always sync your local repository with the remote by pulling changes before pushing, especially if you’re working on a team project.
+
+12. Communication and Collaboration
+Always communicate clearly with your team about the changes you’re making.
+Share progress and ask for reviews when necessary.

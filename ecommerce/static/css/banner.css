@@ -1,0 +1,97 @@
+/* Banner container styles */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Set a fixed height for the banner */
+    overflow: hidden;
+}
+
+/* Slides container to ensure images fit within the banner */
+.slides {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+}
+
+/* Image styles */
+.slides img {
+    width: 100%; /* Ensures images cover the full width */
+    height: 100%; /* Ensures images cover the full height */
+    object-fit: cover; /* Ensures the images fill the container while maintaining aspect ratio */
+    object-position: center bottom; /* Focuses on the center and bottom part of the image */
+    display: none; /* Hide images initially */
+    border-radius: 5px; /* Optional, for rounded corners */
+}
+
+/* Ensure the first image is displayed by default */
+.slides img:first-child {
+    display: block;
+}
+
+/* Navigation dots */
+.navigation {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-dot {
+    height: 12px;
+    width: 12px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-dot.active {
+    background-color: rgba(40, 167, 69, 1); /* Highlight active dot */
+}
+
+.nav-dot:hover {
+    background-color: rgba(40, 167, 69, 0.8);
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) { /* For iPads and tablets */
+    .banner {
+        max-height: 300px; /* Reduce height for smaller screens */
+    }
+
+    .slides img {
+        border-radius: 3px; /* Optional: slightly smaller border radius */
+    }
+
+    .nav-dot {
+        height: 10px;
+        width: 10px;
+    }
+}
+
+@media (max-width: 768px) { /* For iPhones and smaller devices */
+    .banner {
+        max-height: 200px; /* Further reduce height for small screens */
+    }
+
+    .nav-dot {
+        height: 8px;
+        width: 8px;
+    }
+
+    .navigation {
+        bottom: 5px; /* Adjust positioning */
+    }
+}
+
+@media (min-width: 1440px) { /* For large screens and high-res monitors */
+    .banner {
+        max-height: 600px; /* Increase height for larger displays */
+    }
+
+    .slides img {
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ADD SEO">
+    <title>Your Cart - Herba Wanders</title>
+    <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+
+</head>
+<body>
+    <!-- Header -->
+    {% include 'ecommerce/header.html' %}
+
+    <!-- Cart Section -->
+    <main>
+        <section class="cart-section">
+            <h1>Cart</h1>
+            <div class="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            <div class="cart-summary">
+                <!-- Cart summary will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    {% include 'ecommerce/footer.html' %}
+
+    <script src="{% static 'js/cart.js' %}"></script>
+</body>
+</html>

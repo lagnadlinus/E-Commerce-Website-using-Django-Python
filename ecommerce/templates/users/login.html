@@ -1,0 +1,32 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Herba Wanders</title>
+    <link rel="stylesheet" href="{% static 'css/users/login.css' %}">
+
+</head>
+<body>
+    <!-- Header -->
+    {% include 'ecommerce/header.html' %}
+
+    <!-- Login Section -->
+    {% load static %}
+    <div class="login-container">
+        {% block content %}
+        <form method="POST" novalidate>
+            {% csrf_token %}
+            <h2>Login</h2>
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+        </form>
+        {% endblock content %}
+    </div>
+
+    <!-- Footer -->
+    {% include 'ecommerce/footer.html' %}
+</body>
+</html>

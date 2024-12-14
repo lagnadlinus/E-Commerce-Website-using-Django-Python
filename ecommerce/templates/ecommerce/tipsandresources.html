@@ -1,0 +1,49 @@
+
+
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ADD SEO">
+    <title>Tips & Resources - Herba Wanders</title>
+    <link rel="stylesheet" href="{% static 'css/tipsandresources.css' %}">
+</head>
+<body>
+    <!-- Include the header -->
+    {% include 'ecommerce/header.html' %}
+
+    <!-- Tips & Resources Section -->
+    <main class="tips-and-resources-page">
+        <section class="tips-section">
+            <h1>Product Health Benefits</h1>
+            <div class="tips-container">
+                {% for tip in tips_resources %}
+                <article class="tips-item">
+                    <div class="tips-content">
+                        <h2>{{ tip.title }}</h2>
+                        <p>{{ tip.content }}</p>
+                        {% if tip.health_benefits %}
+                        <p class="tips-benefits"><strong>Health Benefits:</strong> {{ tip.health_benefits }}</p>
+                        {% endif %}
+                    </div>
+                    <div class="tips-image">
+                        {% if tip.image %}
+                        <img src="{{ tip.image.url }}" alt="{{ tip.title }}">
+                        {% endif %}
+                    </div>
+                </article>
+                {% empty %}
+                <p>No tips or resources are currently available. Please check back later!</p>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    <!-- Include the footer -->
+    {% include 'ecommerce/footer.html' %}
+</body>
+</html>
