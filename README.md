@@ -2,7 +2,7 @@
 Herba Wander is an e-commerce website for selling natural products like Shilajit, Moringa, and oils. Built with HTML, CSS, JavaScript, and Django, it offers a smooth shopping experience with features like a product catalog, cart functionality, and secure user authentication via Django-Allauth.
 **Herba Wander E-commerce Website**
 
-By Sunil Dangal
+By Nil Arc Vision
 
 **Introduction**
 
@@ -28,7 +28,7 @@ Django-Allauth: For handling user authentication
 **How to Set Up the Project**
 
 **Clone the repository:**
-git clone https://github.com/LagnadLinus/e-commerce-exercise
+git clone https://github.com/lagnadlinus/E-Commerce-Website-using-Django-Python
 cd herba-wander
 
 **Set up the virtual environment:**
