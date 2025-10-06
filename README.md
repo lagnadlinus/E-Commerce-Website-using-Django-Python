@@ -52,9 +52,9 @@ password: 123456789
 or Create a new user for signing in 
 
 **Features**
-Product catalog
-Cart functionality
-User authentication
+Product catalog,
+Cart functionality,
+User authentication,
 Adding new products, New team Member and blog's stocks from Django panel. 
 
 
