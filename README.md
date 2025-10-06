@@ -38,6 +38,8 @@ source virtue_inn/bin/activate
 **Install dependencies:**
 pip install -r requirements.txt
 
+If there are no requirements to install you can skip this...
+
 **Create the Django project:**
 django-admin startproject herba_wanders
 
