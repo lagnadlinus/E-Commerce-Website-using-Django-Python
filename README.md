@@ -29,7 +29,7 @@ Django-Allauth: For handling user authentication
 
 **Clone the repository:**
 git clone https://github.com/lagnadlinus/E-Commerce-Website-using-Django-Python
-cd herba-wander
+cd Herba Wanders
 
 **Set up the virtual environment:**
 python -m venv virtue_inn
