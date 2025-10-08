@@ -32,8 +32,8 @@ git clone https://github.com/lagnadlinus/E-Commerce-Website-using-Django-Python
 cd Herba Wanders
 
 **Set up the virtual environment:**
-python -m venv virtue_inn
-source virtue_inn/bin/activate
+python -m venv virtue_inn           // to create a virtual environment
+source virtue_inn/bin/activate      // to activate it
 
 **Install dependencies:**
 pip install -r requirements.txt

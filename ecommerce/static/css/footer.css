@@ -69,3 +69,17 @@
     margin: 0;
     font-size: 14px;
 }
+
+.creator-credit {
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.creator-link {
+    color: #ff9900;
+    text-decoration: none;
+}
+
+.creator-link:hover {
+    text-decoration: underline;
+}
